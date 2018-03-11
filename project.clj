@@ -94,7 +94,7 @@
    :project/dev  {:dependencies [[binaryage/devtools "0.9.4"]
                                  [com.cemerick/piggieback "0.2.2"]
                                  [doo "0.1.7"]
-                                 [figwheel-sidecar "0.5.14"]
+                                 [figwheel-sidecar "0.5.15"]
                                  [pjstadig/humane-test-output "0.8.1"]
                                  [prone "1.1.1"]
                                  [ring/ring-devel "1.5.0"]
@@ -102,7 +102,7 @@
                                  [re-frisk "0.5.2"]]
                   :plugins      [[com.jakemccrary/lein-test-refresh "0.14.0"]
                                  [lein-doo "0.1.7"]
-                                 [lein-figwheel "0.5.14"]]
+                                 [lein-figwheel "0.5.15"]]
                   :cljsbuild
                   {:builds
                    {:app
