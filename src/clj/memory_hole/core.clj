@@ -14,22 +14,22 @@
     :parse-fn #(Integer/parseInt %)]])
 
 (mount/defstate ^{:on-reload :noop}
-http-server
+  http-server
   :start
   (http/start
-    (-> env
-        (assoc :handler #'handler/app)
-        (update :port #(or (-> env :options :port) %))
-        (merge
-          (when-let [{:keys [port keystore keystore-pass]} (:ssl env)]
-            {:ssl-port     port
-             :keystore     keystore
-             :key-password keystore-pass}))))
+   (-> env
+       (assoc :handler #'handler/app)
+       (update :port #(or (-> env :options :port) %))
+       (merge
+        (when-let [{:keys [port keystore keystore-pass]} (:ssl env)]
+          {:ssl-port     port
+           :keystore     keystore
+           :key-password keystore-pass}))))
   :stop
   (http/stop http-server))
 
 (mount/defstate ^{:on-reload :noop}
-repl-server
+  repl-server
   :start
   (when-let [nrepl-port (env :nrepl-port)]
     (repl/start {:port nrepl-port}))
