@@ -28,6 +28,9 @@
                  [org.clojure/clojurescript "1.10.145" :scope "provided"]
                  [org.clojure/tools.cli "0.3.5"]
                  [org.clojure/tools.logging "0.4.0"]
+                 ;; This is needed because of a bug in emacs-cider see:
+                 ;; https://github.com/clojure-emacs/cider/issues/2236
+                 [org.clojure/tools.reader "1.2.2"]
                  [org.webjars.bower/tether "1.4.3"]
                  [org.webjars/bootstrap "4.0.0-2"]
                  [org.webjars/font-awesome "5.0.6"]
