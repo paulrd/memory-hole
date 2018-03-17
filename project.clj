@@ -25,7 +25,7 @@
                  [mount "0.1.12"]
                  [org.clojars.pntblnk/clj-ldap "0.0.16"]
                  [org.clojure/clojure "1.9.0"]
-                 [org.clojure/clojurescript "1.10.145" :scope "provided"]
+                 [org.clojure/clojurescript "1.10.191" :scope "provided"]
                  [org.clojure/tools.cli "0.3.5"]
                  [org.clojure/tools.logging "0.4.0"]
                  ;; This is needed because of a bug in emacs-cider see:
@@ -35,7 +35,7 @@
                  [org.webjars/bootstrap "4.0.0-2"]
                  [org.webjars/font-awesome "5.0.6"]
                  [org.webjars/webjars-locator-jboss-vfs "0.1.0"]
-                 [org.postgresql/postgresql "42.1.4"]
+                 [org.postgresql/postgresql "42.2.2"]
                  [com.h2database/h2 "1.4.196"]
                  [re-com "2.1.0"]
                  [re-frame "0.10.5"]
@@ -100,7 +100,7 @@
 
    :project/dev  {:dependencies [[binaryage/devtools "0.9.9"]
                                  [com.cemerick/piggieback "0.2.2"]
-                                 [doo "0.1.8"]
+                                 [doo "0.1.9"]
                                  [figwheel-sidecar "0.5.15"]
                                  [pjstadig/humane-test-output "0.8.3"]
                                  [prone "1.5.0"]
@@ -108,7 +108,8 @@
                                  [ring/ring-mock "0.3.2"]
                                  [re-frisk "0.5.3"]]
                   :plugins      [[com.jakemccrary/lein-test-refresh "0.22.0"]
-                                 [lein-doo "0.1.8"]
+                                 [lein-doo "0.1.9"]
+                                 [lein-ancient "0.6.15"]
                                  [lein-figwheel "0.5.15"]]
                   :cljsbuild
                   {:builds
