@@ -14,7 +14,7 @@
                  [cljsjs/showdown "1.4.2-0"]
                  [com.andrewmcveigh/cljs-time "0.5.2"]
                  [compojure "1.6.0"]
-                 [conman "0.7.6"]
+                 [conman "0.7.7"]
                  [cprop "0.1.11"]
                  [funcool/cuerdas "2.0.5"]
                  [luminus-immutant "0.2.4"]
@@ -25,18 +25,15 @@
                  [mount "0.1.12"]
                  [org.clojars.pntblnk/clj-ldap "0.0.16"]
                  [org.clojure/clojure "1.9.0"]
-                 [org.clojure/clojurescript "1.10.191" :scope "provided"]
                  [org.clojure/tools.cli "0.3.5"]
                  [org.clojure/tools.logging "0.4.0"]
-                 ;; This is needed because of a bug in emacs-cider see:
-                 ;; https://github.com/clojure-emacs/cider/issues/2236
-                 [org.clojure/tools.reader "1.2.2"]
                  [org.webjars.bower/tether "1.4.3"]
-                 [org.webjars/bootstrap "4.0.0-2"]
-                 [org.webjars/font-awesome "5.0.6"]
                  [org.webjars/webjars-locator-jboss-vfs "0.1.0"]
                  [org.postgresql/postgresql "42.2.2"]
-                 [com.h2database/h2 "1.4.196"]
+                 [org.clojure/clojurescript "1.10.238" :scope "provided"]
+                 [org.webjars/bootstrap "3.3.6"]
+                 [org.webjars/font-awesome "4.7.0"]
+                 [com.h2database/h2 "1.4.197"]
                  [re-com "2.1.0"]
                  [re-frame "0.10.5"]
                  [reagent "0.7.0"]
@@ -49,7 +46,6 @@
 
   :min-lein-version "2.0.0"
 
-  :java-source-paths ["src/java"]
   :jvm-opts ["-server" "-Dconf=.lein-env"]
   :source-paths ["src/clj" "src/cljc"]
   :resource-paths ["resources" "target/cljsbuild"]
@@ -74,7 +70,7 @@
 
   :profiles
   {:uberjar {:omit-source true
-             :prep-tasks ["javac" "compile" ["cljsbuild" "once" "min"]]
+             :prep-tasks ["compile" ["cljsbuild" "once" "min"]]
              :cljsbuild
              {:builds
               {:min
@@ -100,16 +96,16 @@
 
    :project/dev  {:dependencies [[binaryage/devtools "0.9.9"]
                                  [com.cemerick/piggieback "0.2.2"]
-                                 [doo "0.1.9"]
+                                 [doo "0.1.10"]
                                  [figwheel-sidecar "0.5.15"]
                                  [pjstadig/humane-test-output "0.8.3"]
                                  [prone "1.5.0"]
                                  [ring/ring-devel "1.6.3"]
                                  [ring/ring-mock "0.3.2"]
-                                 [re-frisk "0.5.3"]]
+                                 [re-frisk "0.5.4]]
                   :plugins      [[com.jakemccrary/lein-test-refresh "0.22.0"]
-                                 [lein-doo "0.1.9"]
                                  [lein-ancient "0.6.15"]
+                                 [lein-doo "0.1.10"]
                                  [lein-figwheel "0.5.15"]]
                   :cljsbuild
                   {:builds
